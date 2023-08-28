@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "5c834f5f-b53a-4580-866d-346a2d2aacf0",
+		"name": "RESTFUL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12454360"
+	},
+	"item": [
+		{
+			"name": "Get Items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://localhost:{{port}}/items",
+					"protocol": "{{protocol}}",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Item",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"item ddddddddddd\",\r\n    \"price\": 882.66\r\n}"
+				},
+				"url": {
+					"raw": "{{protocol}}://localhost:{{port}}/items",
+					"protocol": "{{protocol}}",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Item By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://localhost:{{port}}/items/ba0da9c5-2740-4239-8de6-eeb393c53bf3",
+					"protocol": "{{protocol}}",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"items",
+						"ba0da9c5-2740-4239-8de6-eeb393c53bf3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Item",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"new name here\",\r\n    \"price\": 1999\r\n}"
+				},
+				"url": {
+					"raw": "{{protocol}}://localhost:{{port}}/items/ba0da9c5-2740-4239-8de6-eeb393c53bf3",
+					"protocol": "{{protocol}}",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"items",
+						"ba0da9c5-2740-4239-8de6-eeb393c53bf3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Item",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/items/87df6d9d-1b16-4a86-886d-ba8d2271f584",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"items",
+						"87df6d9d-1b16-4a86-886d-ba8d2271f584"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Healthcheck Ready",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://localhost:{{port}}/health/ready",
+					"protocol": "{{protocol}}",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"health",
+						"ready"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Healthcheck Live",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{protocol}}://localhost:{{port}}/health/live",
+					"protocol": "{{protocol}}",
+					"host": [
+						"localhost"
+					],
+					"port": "{{port}}",
+					"path": [
+						"health",
+						"live"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "port",
+			"value": "5001"
+		},
+		{
+			"key": "protocol",
+			"value": "https"
+		}
+	]
+}
